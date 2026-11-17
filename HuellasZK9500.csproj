@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Debe coincidir con la libzkfp.dll instalada (x64 en System32, x86 en SysWOW64) -->
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Copia libzkfpcsharp.dll (viene en el ZKFinger SDK) a la carpeta lib\ -->
+    <Reference Include="libzkfpcsharp">
+      <HintPath>lib\libzkfpcsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
